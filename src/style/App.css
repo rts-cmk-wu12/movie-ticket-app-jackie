@@ -45,4 +45,15 @@ a {
 
 .welcomeHeading{
   color: #fff;
+  padding-left: 12%;
+}
+.profile_placeholder{
+  max-width: 
+  70px;
+  display: grid
+;
+    justify-self: end;
+    margin-right: 12%;
+    border-radius: 10px;
+    
 }

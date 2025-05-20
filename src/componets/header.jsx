@@ -1,3 +1,4 @@
+  import "../style/search.scss";
    export default function Header() {
 
 
@@ -7,11 +8,14 @@
 
     <header>
       <div>
-      <h1 className="welcomeHeading">Welcome back</h1>
-      {/* name */}
+      <p className="welcomeHeading">Welcome back</p>
+     <p className="welcomeHeading">Dig</p>
       </div>
-      <img src="" alt="" />
-      <nav>
+      <img className="profile_placeholder" src="src/Profile_avatar_placeholder_large.png" alt="" />
+      <nav className="search-section" >
+        <form >
+            <input className="signup-form__input" placeholder="Search"/>
+        </form>
         
       </nav>
     </header>
