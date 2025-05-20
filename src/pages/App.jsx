@@ -1,5 +1,5 @@
 
-import './App.css'
+import '../style/App.css'
 import Footer from '../componets/footer'
 import Header from '../componets/header'
 
