@@ -2,7 +2,7 @@ import { useState } from "react";
 import { createRoot } from 'react-dom/client'
 import { GloabelContext } from "./gloabelContext";
 import { createBrowserRouter, RouterProvider } from 'react-router'
-import App from './App.jsx'
+import App from './pages/App.jsx'
 // import Details from "./details.jsx";
 // import Search from "./search.jsx";
 // import Searchpage from "./searchpage.jsx";
