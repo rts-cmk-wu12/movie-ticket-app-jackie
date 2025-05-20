@@ -5,6 +5,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+
+#root{
+     max-width: 430px;
+
+    margin: 0 auto;
+    background-color: #1B1E25;
+ 
+}
 ul {
   display: grid;
   grid-auto-flow: column;
@@ -34,9 +42,7 @@ a {
 .footer{
   background-color: #1B1E25;
 }
-body{
-  background-color: #1B1E25;
-}
+
 .welcomeHeading{
   color: #fff;
 }
