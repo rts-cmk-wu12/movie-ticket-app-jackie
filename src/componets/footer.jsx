@@ -10,15 +10,15 @@ export default function Footer() {
     return (
         <>
 
- <footer className="footer">
-            <ul>
-                <li> <Link to={`/search`}><IoMdHome /></Link></li>
-                <li> <Link to={`/`}><RiMovie2Line /></Link></li>
-                <li><Link to=""><CiBookmark /></Link></li>
-                       <li><Link to=""><MdPerson /></Link></li>
+            <footer className="footer">
+                <ul>
+                    <li> <Link to={`/`}><IoMdHome /></Link></li>
+                    <li> <Link to={`/Explore`}><RiMovie2Line /></Link></li>
+                    <li><Link to=""><CiBookmark /></Link></li>
+                    <li><Link to=""><MdPerson /></Link></li>
 
-            </ul>
-</footer>
+                </ul>
+            </footer>
         </>
     );
 }

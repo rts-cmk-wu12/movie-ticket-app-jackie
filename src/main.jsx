@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { GloabelContext } from "./gloabelContext";
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import App from './pages/App.jsx'
+import Explore from './pages/Explore.jsx'
 // import Details from "./details.jsx";
 // import Search from "./search.jsx";
 // import Searchpage from "./searchpage.jsx";
@@ -19,8 +20,13 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />
   },
-  
-  
+
+  {
+    path: "/Explore",
+    element: <Explore />
+  },
+
+
   // {
   //   //vi definere vores details side path 
   //   path: "/details/:movieId",
