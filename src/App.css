@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+}
+ul {
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  justify-content: space-evenly;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* Change to your desired background color */
+  padding: 10px;
+  /* Adjust padding as needed */
+  background-color: #fff;
+  z-index: 1000;
+  /* Ensure it's above other content */
+
+}
+
+.footer,
+a {
+  color: #636882
+}
+
+.footer{
+  background-color: #1B1E25;
+}
+body{
+  background-color: #1B1E25;
+}
+.welcomeHeading{
+  color: #fff;
+}
