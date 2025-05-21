@@ -4,6 +4,7 @@ import { GloabelContext } from "./gloabelContext";
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import App from './pages/App.jsx'
 import Explore from './pages/Explore.jsx'
+import Details from './pages/details.jsx'
 // import Details from "./details.jsx";
 // import Search from "./search.jsx";
 // import Searchpage from "./searchpage.jsx";
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
   {
     path: "/Explore",
     element: <Explore />
+  },
+
+  {
+    path: "/details/:movieId",
+    element: <Details />
   },
 
 

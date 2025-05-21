@@ -2,7 +2,57 @@ h1 {
     color: white;
 }
 
+
+
 .topmenu {
-    display: flex;
-    gap: 20px;
+    padding: 20px;
+    color: white;
+
+    .topmenu-header {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        .back-button {
+            cursor: pointer;
+            transition: transform 0.2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        h1 {
+            font-size: 24px;
+            margin: 0;
+        }
+    }
+
+    .toggle-buttons {
+        margin-top: 20px;
+        display: flex;
+        gap: 10px;
+        background-color: #32363D;
+        border-radius: 12px;
+        padding: 10px 20px;
+        align-items: center;
+        justify-content: center;
+
+        button {
+            background-color: transparent;
+            color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &.active,
+            &:hover {
+                background-color: #54A8E5;
+                color: #0d253f;
+            }
+        }
+    }
 }
