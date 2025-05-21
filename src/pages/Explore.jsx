@@ -1,4 +1,4 @@
-// File: src/pages/Explore.jsx
+
 import React, { useState } from 'react';
 import '../style/App.css';
 import Footer from '../componets/footer';
@@ -8,7 +8,7 @@ import RecommendedMovies from '../componets/recommendedmovies';
 import CommingSoon from '../componets/commingsoon';
 
 function Explore() {
-    const [showNow, setShowNow] = useState(true); // styr visning
+    const [showNow, setShowNow] = useState(true);
 
     return (
         <>

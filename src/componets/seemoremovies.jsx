@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router';
-import "../style/topmovies.scss";
 
-function TopMovies() {
+
+
+function SeeMoreMovies() {
+
+
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
@@ -16,20 +19,15 @@ function TopMovies() {
             .then(res => res.json())
             .then(data => {
                 if (data?.results) {
-                    setMovies(data.results.slice(0, 6));
+                    setMovies(data.results.slice(0, 50));
                 }
             });
     }, []);
 
     return (
         <div className="top-movies-section">
-            <div className="top-movies-header">
-                <h2>Top Movies</h2>
-                <Link to={`/seemore/`}>
-                    <button>see more</button>
-                </Link>
-            </div>
-            <div className="top-movies-grid">
+
+            <div>
                 {movies.map(movie => (
                     <div key={movie.id} className="movie-card">
                         <Link to={`/details/${movie.id}`}>
@@ -50,4 +48,4 @@ function TopMovies() {
     );
 }
 
-export default TopMovies;
+export default SeeMoreMovies;
