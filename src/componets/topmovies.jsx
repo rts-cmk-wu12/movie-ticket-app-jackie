@@ -1,5 +1,6 @@
 import { useEffect,useState } from "react";
 import "../style/topmovies.scss";
+import { Link } from "react-router";
 
 function TopMovies() {
     const [movies, setMovies] = useState([]);
