@@ -1,11 +1,12 @@
-import { useEffect,useState } from "react";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 import "../style/topmovies.scss";
 
-function TopMovies() {
+function RecommendedMovies() {
     const [movies, setMovies] = useState([]);
 
     useEffect(() => {
-        fetch('https://api.themoviedb.org/3/movie/popular?language=en-US&page=1', {
+        fetch('https://api.themoviedb.org/3/movie/157336/recommendations?language=en-US&page=1', {
             method: 'GET',
             headers: {
                 accept: 'application/json',
@@ -17,16 +18,14 @@ function TopMovies() {
                 if (data?.results) {
                     setMovies(data.results.slice(0, 6));
                 }
-            });
+            })
+            .catch(error => console.error("Error fetching recommended movies:", error));
     }, []);
 
     return (
         <div className="top-movies-section">
             <div className="top-movies-header">
-                <h2>Top Movies</h2>
-                <Link to={`/seemore/`}>
-                    <button>see more</button>
-                </Link>
+                <h2>Recommended Movies</h2>
             </div>
             <div className="top-movies-grid">
                 {movies.map(movie => (
@@ -49,4 +48,4 @@ function TopMovies() {
     );
 }
 
-export default TopMovies;
+export default RecommendedMovies;

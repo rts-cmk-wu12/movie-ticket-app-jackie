@@ -4,6 +4,8 @@ import { GloabelContext } from "./gloabelContext";
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import App from './pages/App.jsx'
 import Explore from './pages/Explore.jsx'
+import Details from './pages/details.jsx'
+import SeeMore from './pages/seemore.jsx'
 // import Details from "./details.jsx";
 // import Search from "./search.jsx";
 // import Searchpage from "./searchpage.jsx";
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
   {
     path: "/Explore",
     element: <Explore />
+  },
+
+  {
+    path: "/details/:movieId",
+    element: <Details />
+  },
+
+  {
+    path: "/seemore",
+    element: <SeeMore />
   },
 
 
@@ -72,10 +84,6 @@ const MyProvider = ({ children }) => {
 
 
 createRoot(document.getElementById('root')).render(
-
-
-
-  //vi putter vores context rundt om vores projekt
   <MyProvider>
     <RouterProvider router={router} />
   </MyProvider>
