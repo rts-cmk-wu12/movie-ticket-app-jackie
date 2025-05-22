@@ -69,3 +69,11 @@ a {
 .cinematext, .cinemaname{
   color: white;
 }
+.cinemas{
+      padding: 20px;
+     
+}
+.cinemas ul li{
+     margin-bottom: 20px;
+     
+}

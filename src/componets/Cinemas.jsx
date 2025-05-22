@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
 
-const Cinemas = () => {
+import { useEffect,useState } from "react";
+ export default function Cinemas() {
   const [cinemas, setCinemas] = useState([]);
 
   useEffect(() => {
@@ -11,8 +11,8 @@ const Cinemas = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Cinema Locations in Denmark</h1>
+    <div className='cinemas'>
+      <h1>Cinemas near you</h1>
       <ul>
         {cinemas.map((cinema, index) => (
           <li key={index}>
@@ -26,6 +26,6 @@ const Cinemas = () => {
   );
 };
 
-export default Cinemas;
+
 
 

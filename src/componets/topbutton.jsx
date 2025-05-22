@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect,useState } from "react";
 import "../style/topbutton.scss";
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { useNavigate } from "react-router";
