@@ -1,0 +1,72 @@
+.checkout-page {
+    padding: 20px;
+    background: #121212;
+    color: white;
+    min-height: 100vh;
+}
+
+.checkout-container {
+    max-width: 400px;
+    margin: auto;
+}
+
+.payment-method .card {
+    background: linear-gradient(to right, #3b8ed3, #1790dc);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.card .logo img {
+    width: 40px;
+}
+
+.balance {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-holder,
+.card-number {
+    font-weight: 600;
+}
+
+.payment-details label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.payment-details input,
+.payment-details select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: #1e1e1e;
+    color: white;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.col {
+    flex: 1;
+}
+
+.pay-btn {
+    background: #57aafc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
