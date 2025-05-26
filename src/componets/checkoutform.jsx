@@ -10,28 +10,20 @@ function CheckoutForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Check if all fields are filled
         if (!name || !email || !cardNumber || !date || !cvv) {
             alert("Please fill out all fields.");
             return;
         }
-
-        // Email validation
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
             alert("Please enter a valid email address.");
             return;
         }
-
-        // Card number validation (16 digits)
         const cardNumberPattern = /^\d{16}$/;
         if (!cardNumberPattern.test(cardNumber)) {
             alert("Card number must be exactly 16 digits.");
             return;
         }
-
-        // CVV validation (3 digits)
         if (!/^\d{3}$/.test(cvv)) {
             alert("CVV must be exactly 3 digits.");
             return;
@@ -41,14 +33,11 @@ function CheckoutForm() {
        booked.push({ email, name, cardNumber, date, cvv });
         localStorage.setItem('sponsors', JSON.stringify(booked));
 
-        // Clear fields after submission
         setName('');
         setCardNumber('');
         setEmail('');
         setDate('');
         setCvv('');
-
-        // Show thank you message
         alert("Thank you for booking!");
     };
 
