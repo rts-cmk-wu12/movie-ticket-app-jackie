@@ -109,6 +109,10 @@ h2 {
     cursor: pointer;
     transition: 0.3s;
 
+    a {
+        color: white;
+    }
+
     &:hover {
         background: #3399ff;
     }

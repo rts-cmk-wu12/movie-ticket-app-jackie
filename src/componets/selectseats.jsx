@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style/seats.scss';
 import { Link } from "react-router";
 
-const cinemas = ['Empire XXI Yogyakarta', 'Cinepolis', 'CGV'];
+const cinemas = ['Nordisk Film Biografer', 'Atlas Biograf', 'MovieHouse'];
 const times = ['10:00 AM', '01:00 PM', '04:00 PM', '07:00 PM', '09:30 PM'];
 const today = new Date();
 const dates = Array.from({ length: 7 }, (_, i) => {
@@ -23,7 +23,7 @@ const reservedSeats = [
 ];
 
 const MAX_SELECTION = 6;
-const SEAT_PRICE = 20;
+const SEAT_PRICE = 49;
 
 function SelectSeats() {
     const [selectedCinema, setSelectedCinema] = useState(cinemas[0]);
