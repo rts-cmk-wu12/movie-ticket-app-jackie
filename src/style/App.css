@@ -47,6 +47,10 @@ a {
       grid-column: 1;
       padding-left: 12%;
 }
+
+.checkout__heading{
+  color: #fff;
+}
 .welcomediv{
   padding-top: 10%;
   display: grid

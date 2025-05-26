@@ -6,6 +6,7 @@ import App from './pages/App.jsx'
 import Explore from './pages/Explore.jsx'
 import Details from './pages/details.jsx'
 import SeeMore from './pages/seemore.jsx'
+import CheckoutForm from "./pages/checkout.jsx";
 // import Details from "./details.jsx";
 // import Search from "./search.jsx";
 // import Searchpage from "./searchpage.jsx";
@@ -37,7 +38,10 @@ const router = createBrowserRouter([
     path: "/seemore",
     element: <SeeMore />
   },
-
+ {
+    path: "/checkout",
+    element: <CheckoutForm />
+  },
 
   // {
   //   //vi definere vores details side path 
