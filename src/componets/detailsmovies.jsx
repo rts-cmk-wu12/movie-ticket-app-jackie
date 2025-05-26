@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import "../style/detailsmovie.scss";
+import { Link } from "react-router";
 
 function DetailsMovies() {
     const { movieId } = useParams();
@@ -62,8 +63,9 @@ function DetailsMovies() {
 
                 <h3>Synopsis</h3>
                 <p className="overview">{movie.overview}</p>
-
-                <button className="book-button">Book Ticket</button>
+                <Link to={`/seats/`}>
+                    <button className="book-button">Book Ticket</button>
+                </Link>
             </div>
         </div>
     );
