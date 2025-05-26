@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style/seats.scss';
 import { Link } from "react-router";
 
-const cinemas = ['Empire XXI Yogyakarta', 'Cinepolis', 'CGV'];
+const cinemas = ['Nordisk Film Biografer', 'Atlas Biograf', 'MovieHouse'];
 const times = ['10:00 AM', '01:00 PM', '04:00 PM', '07:00 PM', '09:30 PM'];
 const today = new Date();
 const dates = Array.from({ length: 7 }, (_, i) => {
