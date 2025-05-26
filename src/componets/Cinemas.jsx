@@ -4,7 +4,7 @@ export default function Cinemas() {
     const [cinemas, setCinemas] = useState([]);
 
     useEffect(() => {
-        fetch('/cinemas.json') // Fetching from the same folder
+        fetch('/cinemas.json')
             .then(response => response.json())
             .then(data => setCinemas(data))
             .catch(error => console.error('Error fetching cinemas:', error));
