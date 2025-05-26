@@ -87,7 +87,7 @@ function CheckoutForm() {
                     name="cardNumber" 
                     placeholder="**** **** **** 51446" 
                     value={cardNumber} 
-                    maxLength="16" // Set max length to 16
+                    maxLength="16" 
                     onChange={(e) => setCardNumber(e.target.value)} 
                 />
 
