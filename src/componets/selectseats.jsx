@@ -23,7 +23,7 @@ const reservedSeats = [
 ];
 
 const MAX_SELECTION = 6;
-const SEAT_PRICE = 20;
+const SEAT_PRICE = 49;
 
 function SelectSeats() {
     const [selectedCinema, setSelectedCinema] = useState(cinemas[0]);
