@@ -57,8 +57,9 @@ function CheckoutForm() {
                         <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="mc" />
                     </div>
                     <div className="balance">$120,580.00</div>
-                    <div className="card-holder">Jackie</div>
+                    <div className="card-holder">{name} </div>
                     <div className="card-number">**** **** **** 51446</div>
+                           <div className="card-number">{cvv}</div>
                 </div>
             </div>
 
