@@ -8,7 +8,7 @@ import Details from './pages/details.jsx'
 import SeeMore from './pages/seemore.jsx'
 import CheckoutForm from "./pages/checkout.jsx";
 import Seats from './pages/seats.jsx'
-import Checkout from './pages/Checkout.jsx'
+import Checkout from './pages/checkout.jsx'
 // import Details from "./details.jsx";
 // import Search from "./search.jsx";
 // import Searchpage from "./searchpage.jsx";
