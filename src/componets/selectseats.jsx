@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../style/seats.scss';
 import { Link } from "react-router";
 
-const cinemas = ['Nordisk Film Biografer', 'Atlas Biograf', 'MovieHouse'];
 const times = ['10:00 AM', '01:00 PM', '04:00 PM', '07:00 PM', '09:30 PM'];
 const today = new Date();
 const dates = Array.from({ length: 7 }, (_, i) => {
@@ -26,10 +25,23 @@ const MAX_SELECTION = 6;
 const SEAT_PRICE = 49;
 
 function SelectSeats() {
-    const [selectedCinema, setSelectedCinema] = useState(cinemas[0]);
+    const [cinemas, setCinemas] = useState([]);
+    const [selectedCinema, setSelectedCinema] = useState('');
     const [selectedDate, setSelectedDate] = useState(dates[0]);
     const [selectedTime, setSelectedTime] = useState(times[1]);
     const [selectedSeats, setSelectedSeats] = useState([]);
+
+    useEffect(() => {
+        fetch('/cinemas.json')
+            .then(response => response.json())
+            .then(data => {
+                setCinemas(data);
+                if (data.length > 0) {
+                    setSelectedCinema(data[0].name); 
+                }
+            })
+            .catch(error => console.error('Error fetching cinemas:', error));
+    }, []);
 
     const toggleSeat = (row, col) => {
         const seatId = `${row}-${col}`;
@@ -56,19 +68,21 @@ function SelectSeats() {
             <div className="dropdowns">
                 <select value={selectedCinema} onChange={e => setSelectedCinema(e.target.value)}>
                     {cinemas.map(cinema => (
-                        <option key={cinema}>{cinema}</option>
+                        <option key={cinema.name} value={cinema.name}>
+                            {cinema.name} 
+                        </option>
                     ))}
                 </select>
 
                 <select value={selectedDate} onChange={e => setSelectedDate(e.target.value)}>
                     {dates.map(date => (
-                        <option key={date}>{date}</option>
+                        <option key={date} value={date}>{date}</option>
                     ))}
                 </select>
 
                 <select value={selectedTime} onChange={e => setSelectedTime(e.target.value)}>
                     {times.map(time => (
-                        <option key={time}>{time}</option>
+                        <option key={time} value={time}>{time}</option>
                     ))}
                 </select>
             </div>
@@ -117,3 +131,4 @@ function SelectSeats() {
 }
 
 export default SelectSeats;
+
