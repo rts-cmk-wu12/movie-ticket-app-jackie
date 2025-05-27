@@ -37,7 +37,7 @@ function SelectSeats() {
             .then(data => {
                 setCinemas(data);
                 if (data.length > 0) {
-                    setSelectedCinema(data[0].name); 
+                    setSelectedCinema(data[0].name);
                 }
             })
             .catch(error => console.error('Error fetching cinemas:', error));
@@ -62,23 +62,25 @@ function SelectSeats() {
     const totalPrice = selectedSeats.length * SEAT_PRICE;
 
     const handleCheckout = () => {
-    const existingBookings = JSON.parse(localStorage.getItem("bookings")) || [];
-    
+        const existingBookings = JSON.parse(localStorage.getItem("bookings")) || [];
 
-    const newBookingId = existingBookings.length > 0 ? existingBookings[existingBookings.length - 1].id + 1 : 1;
 
-    const newBooking = {
-        id: newBookingId,  
-        cinema: selectedCinema,
-        date: selectedDate,
-        time: selectedTime,
-        seats: selectedSeats,
-        totalPrice: totalPrice
+        const newBookingId = existingBookings.length > 0 ? existingBookings[existingBookings.length - 1].id + 1 : 1;
+
+        const newBooking = {
+            id: newBookingId,
+            cinema: selectedCinema,
+            date: selectedDate,
+            time: selectedTime,
+            seats: selectedSeats,
+            totalPrice: totalPrice
+        };
+
+        existingBookings.push(newBooking);
+        localStorage.setItem("bookings", JSON.stringify(existingBookings));
+
+        localStorage.setItem("totalPrice", totalPrice.toString());
     };
-
-    existingBookings.push(newBooking);
-    localStorage.setItem("bookings", JSON.stringify(existingBookings));
-};
 
 
     return (
@@ -89,7 +91,7 @@ function SelectSeats() {
                 <select value={selectedCinema} onChange={e => setSelectedCinema(e.target.value)}>
                     {cinemas.map(cinema => (
                         <option key={cinema.name} value={cinema.name}>
-                            {cinema.name} 
+                            {cinema.name}
                         </option>
                     ))}
                 </select>
@@ -139,8 +141,8 @@ function SelectSeats() {
                 <span><span className="dot available"></span> Available</span>
             </div>
 
-            <button 
-                className="checkout-btn" 
+            <button
+                className="checkout-btn"
                 onClick={() => {
                     handleCheckout();
                 }}
