@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PopUp from '../componets/popup.jsx';
 
 function CheckoutForm() {
     const [name, setName] = useState('');
@@ -7,6 +8,7 @@ function CheckoutForm() {
     const [email, setEmail] = useState('');
     const [date, setDate] = useState('');
     const [cvv, setCvv] = useState('');
+    const [showPopup, setShowPopup] = useState(false);
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -14,31 +16,37 @@ function CheckoutForm() {
             alert("Please fill out all fields.");
             return;
         }
+
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(email)) {
             alert("Please enter a valid email address.");
             return;
         }
-        const cardNumberPattern = /^\d{16}$/;
-        if (!cardNumberPattern.test(cardNumber)) {
+
+        if (!/^\d{16}$/.test(cardNumber)) {
             alert("Card number must be exactly 16 digits.");
             return;
         }
+
         if (!/^\d{3}$/.test(cvv)) {
             alert("CVV must be exactly 3 digits.");
             return;
         }
 
         const booked = JSON.parse(localStorage.getItem('bookers')) || [];
-       booked.push({ email, name, cardNumber, date, cvv });
+        booked.push({ email, name, cardNumber, date, cvv });
         localStorage.setItem('sponsors', JSON.stringify(booked));
+
+
+        setShowPopup(true);
+
 
         setName('');
         setCardNumber('');
         setEmail('');
         setDate('');
         setCvv('');
-        alert("Thank you for booking!");
+
     };
 
     useEffect(() => {
@@ -59,56 +67,56 @@ function CheckoutForm() {
                     <div className="balance">$120,580.00</div>
                     <div className="card-holder">{name} </div>
                     <div className="card-number">**** **** **** 51446</div>
-                           <div className="card-number">{cvv}</div>
+                    <div className="card-number">{cvv}</div>
                 </div>
             </div>
 
             <form className="payment-details" onSubmit={handleSubmit}>
                 <label>Your Email</label>
-                <input 
-                    type="email" 
-                    name="email" 
-                    placeholder="email" 
-                    value={email} 
-                    onChange={(e) => setEmail(e.target.value)} 
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
 
                 <label>Cardholder Name</label>
-                <input 
-                    type="text" 
-                    name="name" 
-                    placeholder="Full Name" 
-                    value={name} 
-                    onChange={(e) => setName(e.target.value)} 
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Full Name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
                 />
 
                 <label>Card Number</label>
-                <input 
-                    type="text" 
-                    name="cardNumber" 
-                    placeholder="**** **** **** 51446" 
-                    value={cardNumber} 
-                    maxLength="16" 
-                    onChange={(e) => setCardNumber(e.target.value)} 
+                <input
+                    type="text"
+                    name="cardNumber"
+                    placeholder="**** **** **** 51446"
+                    value={cardNumber}
+                    maxLength="16"
+                    onChange={(e) => setCardNumber(e.target.value)}
                 />
 
                 <div className="row">
                     <div className="col">
                         <label>Date</label>
-                        <input 
-                            type="date" 
-                            onChange={(e) => setDate(e.target.value)} 
+                        <input
+                            type="date"
+                            onChange={(e) => setDate(e.target.value)}
                         />
                     </div>
                     <div className="col">
                         <label>CVV</label>
-                        <input 
-                            type="text" 
-                            name="cvv" 
-                            placeholder="123" 
-                            maxLength="3" 
-                            value={cvv} 
-                            onChange={(e) => setCvv(e.target.value)} 
+                        <input
+                            type="text"
+                            name="cvv"
+                            placeholder="123"
+                            maxLength="3"
+                            value={cvv}
+                            onChange={(e) => setCvv(e.target.value)}
                         />
                     </div>
                 </div>
@@ -117,6 +125,8 @@ function CheckoutForm() {
                     Pay Now <span>${price.toFixed(2)}</span>
                 </button>
             </form>
+
+            <PopUp show={showPopup} />
         </div>
     );
 }

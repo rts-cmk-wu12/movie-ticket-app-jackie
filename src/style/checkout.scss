@@ -1,6 +1,5 @@
 .checkout-page {
     padding: 20px;
-    background: #121212;
     color: white;
     min-height: 100vh;
 }
@@ -37,6 +36,7 @@
 .payment-details label {
     display: block;
     margin: 10px 0 5px;
+    margin-top: 40px;
 }
 
 .payment-details input,
@@ -47,6 +47,7 @@
     border: none;
     background: #1e1e1e;
     color: white;
+    border: 1px solid white;
 }
 
 .row {
