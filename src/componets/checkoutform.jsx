@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import PopUp from '../componets/popup.jsx';
 
 function CheckoutForm() {
@@ -9,6 +9,22 @@ function CheckoutForm() {
     const [date, setDate] = useState('');
     const [cvv, setCvv] = useState('');
     const [showPopup, setShowPopup] = useState(false);
+    const [activeCard, setActiveCard] = useState(0);
+    const cardContainerRef = useRef(null);
+
+    useEffect(() => {
+        const storedPrice = localStorage.getItem("totalPrice");
+        if (storedPrice) {
+            setPrice(parseFloat(storedPrice));
+        }
+    }, []);
+
+    const handleScroll = () => {
+        const scrollLeft = cardContainerRef.current.scrollLeft;
+        const cardWidth = cardContainerRef.current.offsetWidth;
+        const index = Math.round(scrollLeft / cardWidth);
+        setActiveCard(index);
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -36,39 +52,38 @@ function CheckoutForm() {
         const booked = JSON.parse(localStorage.getItem('bookers')) || [];
         booked.push({ email, name, cardNumber, date, cvv });
         localStorage.setItem('sponsors', JSON.stringify(booked));
-
+        localStorage.removeItem("totalPrice");
 
         setShowPopup(true);
-
 
         setName('');
         setCardNumber('');
         setEmail('');
         setDate('');
         setCvv('');
-
     };
-
-    useEffect(() => {
-        const storedPrice = localStorage.getItem("totalPrice");
-        if (storedPrice) {
-            setPrice(parseFloat(storedPrice));
-        }
-    }, []);
 
     return (
         <div className="checkout-container">
             <h2>Checkout</h2>
-            <div className="payment-method">
-                <div className="card">
-                    <div className="logo">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="mc" />
+
+
+            <div
+                className="card-scroll-container"
+                onScroll={handleScroll}
+                ref={cardContainerRef}
+            >
+                {[0, 1, 2].map((index) => (
+                    <div key={index} className={`card ${activeCard === index ? 'active' : ''}`}>
+                        <div className="logo">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png" alt="mc" />
+                        </div>
+                        <div className="balance">$120,580.00</div>
+                        <div className="card-holder">{name}</div>
+                        <div className="card-number">**** **** **** 51446</div>
+                        <div className="card-number">{cvv}</div>
                     </div>
-                    <div className="balance">$120,580.00</div>
-                    <div className="card-holder">{name} </div>
-                    <div className="card-number">**** **** **** 51446</div>
-                    <div className="card-number">{cvv}</div>
-                </div>
+                ))}
             </div>
 
             <form className="payment-details" onSubmit={handleSubmit}>
