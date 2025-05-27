@@ -9,6 +9,7 @@ import SeeMore from './pages/seemore.jsx'
 import CheckoutForm from "./pages/checkout.jsx";
 import Seats from './pages/seats.jsx'
 import Checkout from './pages/checkout.jsx'
+import Ticket from "./pages/ticket.jsx";
 
 
 
@@ -47,8 +48,10 @@ const router = createBrowserRouter([
     path: "/checkout",
     element: <Checkout />
   },
-
-
+{
+    path: "/ticket",
+    element: <Ticket />
+  },
 
 ])
 
