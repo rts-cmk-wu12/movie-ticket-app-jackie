@@ -62,7 +62,7 @@ const Ticket = () => {
                 ) : (
                     <div>No booking information found.</div>
                 )}
-                <img src="public/Barcode.png" alt="" />
+                <img src="/public/Barcode.png" alt="" />
             </div>
 
             <div className="ticket-container">
