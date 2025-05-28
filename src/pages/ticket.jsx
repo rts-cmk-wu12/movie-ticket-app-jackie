@@ -3,13 +3,11 @@ import '../style/ticket.scss';
 import TicketTop from '../componets/tickettop';
 import { Link } from 'react-router';
 import "../style/detailsmovie.scss";
-import PopUpTicket from '../componets/popupticket.jsx';
+import PopUp from '../componets/popup.jsx';
 const Ticket = () => {
     const [bookingDetails, setBookingDetails] = useState(null);
-    const [showPopup, setShowPopup] = useState(false);
 
     const [movieTitle, setMovieTitle] = useState("");
-
 
     useEffect(() => {
         const bookingInfo = localStorage.getItem("bookingInfo");
@@ -19,22 +17,10 @@ const Ticket = () => {
 
         const storedTitle = localStorage.getItem(`movie_id`);
         setMovieTitle(storedTitle);
-
     }, []);
-
-
-    const handleShowPopup = () => {
-        setShowPopup(true);
-    };
-
-
-    const handleClosePopup = () => {
-        setShowPopup(false);
-    };
 
     return (
         <>
-
             <TicketTop />
             <div className='ticket'>
 
@@ -56,14 +42,10 @@ const Ticket = () => {
             </div>
             <div className="details-container"
             >
-
                 <div className="details-info">
-
-                    <button className="book-button" onClick={handleShowPopup}>
-                        Download E-Ticket
-                    </button>
-                </div></div>
-            <PopUpTicket show={showPopup} />
+                    <Link to="/">
+                        <button className="book-button">Download E-Ticket</button>
+                    </Link></div></div>
         </>
     );
 };
