@@ -20,7 +20,9 @@ function RecommendedMovies() {
                 }
             })
             .catch(error => console.error("Error fetching recommended movies:", error));
+           
     }, []);
+
 
     return (
         <div className="top-movies-section">
