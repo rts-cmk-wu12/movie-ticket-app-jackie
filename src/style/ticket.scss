@@ -1,4 +1,4 @@
-$background-image: url(public/Subtract.png);
+$background-image: url(/public/Subtract.png);
 $width: 99%;
 $height: 600px;
 
@@ -15,10 +15,11 @@ $height: 600px;
     p {
         width: 40%;
         margin: 0 auto;
-            font-size:21px
+        font-size: 21px
     }
-    
- font-family: 'Poppins', sans-serif;
+
+    font-family: 'Poppins',
+    sans-serif;
 
 }
 
@@ -36,15 +37,18 @@ $height: 600px;
     img {
         margin-left: 35%;
     }
-    div{
+
+    div {
         width: 65%;
-    margin: 0 auto;
+        margin: 0 auto;
     }
 }
-.eticket{
+
+.eticket {
     color: red;
-    font-size:21px
+    font-size: 21px
 }
-strong{
-        font-size:21px
+
+strong {
+    font-size: 21px
 }
