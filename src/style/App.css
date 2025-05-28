@@ -35,6 +35,10 @@ footer ul {
 
 }
 
+.footer a {
+  color: gray;
+}
+
 
 .footer {
   background-color: #1B1E25;

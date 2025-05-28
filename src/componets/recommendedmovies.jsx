@@ -16,7 +16,7 @@ function RecommendedMovies() {
             .then(res => res.json())
             .then(data => {
                 if (data?.results) {
-                    setMovies(data.results.slice(0, 6));
+                    setMovies(data.results.slice(0, 30));
                 }
             })
             .catch(error => console.error("Error fetching recommended movies:", error));

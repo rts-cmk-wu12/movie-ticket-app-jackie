@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import "../style/topmovies.scss";
 import { Link } from "react-router";
 
@@ -16,7 +16,7 @@ function TopMovies() {
             .then(res => res.json())
             .then(data => {
                 if (data?.results) {
-                    setMovies(data.results.slice(0, 6));
+                    setMovies(data.results.slice(0, 30));
                 }
             });
     }, []);
@@ -26,7 +26,7 @@ function TopMovies() {
             <div className="top-movies-header">
                 <h2>Top Movies</h2>
                 <Link to={`/seemore/`}>
-                    <button>see more</button>
+                    <p>see more</p>
                 </Link>
             </div>
             <div className="top-movies-grid">
