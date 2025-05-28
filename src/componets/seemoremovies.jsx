@@ -19,7 +19,7 @@ function SeeMoreMovies() {
             .then(res => res.json())
             .then(data => {
                 if (data?.results) {
-                    setMovies(data.results.slice(0, 50));
+                    setMovies(data.results.slice(0, 70));
                 }
             });
     }, []);

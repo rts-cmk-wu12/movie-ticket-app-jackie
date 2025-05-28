@@ -26,7 +26,7 @@ function TopMovies() {
             <div className="top-movies-header">
                 <h2>Top Movies</h2>
                 <Link to={`/seemore/`}>
-                    <button>see more</button>
+                    <p>see more</p>
                 </Link>
             </div>
             <div className="top-movies-grid">
