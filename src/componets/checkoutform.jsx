@@ -119,7 +119,7 @@ function CheckoutForm() {
                     <div className="col">
                         <label>Date</label>
                         <input
-                            type="date"
+                            type="number"
                             onChange={(e) => setDate(e.target.value)}
                         />
                     </div>
