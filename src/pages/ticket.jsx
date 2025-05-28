@@ -24,9 +24,9 @@ const Ticket = () => {
         <div className='ticket'>
 
             {bookingDetails ? (
-                <> <div>
+                <> 
                   <p><strong>Film</strong> {movieTitle}</p>
-                  <p>e-ticket</p></div>
+                  <p>e-ticket</p>
                      <p><strong>Date:</strong> {bookingDetails.date}</p>
                       <p><strong>Seats:</strong> {bookingDetails.seats.join(', ')}</p>
                     <p><strong>Cinema:</strong> {bookingDetails.cinema}</p>
