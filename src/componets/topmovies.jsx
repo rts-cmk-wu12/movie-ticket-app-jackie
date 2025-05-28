@@ -1,4 +1,4 @@
-import { useEffect,useState } from "react";
+import { useEffect, useState } from "react";
 import "../style/topmovies.scss";
 import { Link } from "react-router";
 
@@ -16,7 +16,7 @@ function TopMovies() {
             .then(res => res.json())
             .then(data => {
                 if (data?.results) {
-                    setMovies(data.results.slice(0, 6));
+                    setMovies(data.results.slice(0, 30));
                 }
             });
     }, []);
