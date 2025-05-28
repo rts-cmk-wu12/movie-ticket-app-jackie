@@ -32,23 +32,40 @@ const Ticket = () => {
             <div className='ticket'>
                 {bookingDetails ? (
                     <>
+
                         <div>
-                            <p><strong>Movie Title:</strong> {movieTitle}</p>
-                            <p>e-ticket</p>
+                            <h2>Film:</h2> <strong>{movieTitle}</strong>
                         </div>
-                        <p><strong>Date:</strong> {bookingDetails.date}</p>
-                        <p><strong>Seats:</strong> {bookingDetails.seats.join(', ')}</p>
-                        <p><strong>Cinema:</strong> {bookingDetails.cinema}</p>
-                        <p><strong>Time:</strong> {bookingDetails.time}</p>
-                        <p><strong>Payment: </strong>Successful</p>
-                        <p><strong>Order: </strong>01</p>
+                        <div><strong className='eticket'>E-Ticket</strong></div>
+
+                        <div>
+                            <h2>Date:</h2> <strong>{bookingDetails.date}</strong>
+                        </div>
+                        <div>
+                            <h2>Seats:</h2> <strong>{bookingDetails.seats.join(', ')}</strong>
+                        </div>
+                        <div>
+                            <h2>Cinema:</h2> <strong>{bookingDetails.cinema}</strong>
+                        </div>
+                        <div>
+                            <h2>Time:</h2> <strong>{bookingDetails.time}</strong>
+                        </div>
+                        <div>
+                            <h2>Payment:</h2> <strong>Successful</strong>
+                        </div>
+                        <div>
+                            <h2>Order:</h2> <strong>01</strong>
+                        </div>
+
+
                     </>
                 ) : (
                     <div>No booking information found.</div>
                 )}
+                <img src="public/Barcode.png" alt="" />
             </div>
 
-            <div className="details-container">
+            <div className="ticket-container">
                 <div className="details-info">
                     <button className="book-button" onClick={handleShowPopup}>
                         Download E-Ticket
