@@ -1,52 +1,52 @@
 [
   {
     "name": "CinemaxX Copenhagen",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "10:00 AM"
   },
   {
     "name": "Imperial Cinema",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "11:00 AM"
   },
   {
     "name": "Palads Teatret",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "10:30 AM"
   },
   {
     "name": "Nordisk Film Biografer",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "12:00 PM"
   },
   {
     "name": "Biograf City",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "10:00 AM"
   },
   {
     "name": "Cinemagic",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "11:30 AM"
   },
   {
     "name": "Saga Bio",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "10:15 AM"
   },
   {
     "name": "Vester Vov Vov",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "12:30 PM"
   },
   {
     "name": "Bio Mors",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "11:00 AM"
   },
   {
     "name": "CinemaxX Aarhus",
-    "picture": "public/Profile_avatar_placeholder_large.png",
+    "picture": "src/Profile_avatar_placeholder_large.png",
     "opening_time": "10:45 AM"
   }
 ]
