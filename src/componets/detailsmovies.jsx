@@ -21,7 +21,7 @@ function DetailsMovies() {
             .then(data => {
                 setMovie(data);
                 localStorage.setItem(`movie_${movieId}`, JSON.stringify(data));
-                //vi gemmer data.title i local storage under "movie_id"
+
                 localStorage.setItem(`movie_id`, data.title);
             });
 
