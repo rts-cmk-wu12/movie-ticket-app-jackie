@@ -26,7 +26,7 @@ const Ticket = () => {
 
     return (
         <>
-        <div className="movies-grid">
+        {/* <div className="movies-grid">
                 {movies.map(movie => (
                     <div key={movie.id} className="movie-card">
                       
@@ -38,7 +38,7 @@ const Ticket = () => {
                         </div>
                     </div>
                 ))}
-            </div>
+            </div> */}
         <div className='ticket'>
             <h2>Booking Information</h2>
             {bookingDetails ? (

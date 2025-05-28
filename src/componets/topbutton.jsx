@@ -1,4 +1,3 @@
-// File: src/componets/topbutton.jsx
 import React from 'react';
 import { FaLongArrowAltLeft } from "react-icons/fa";
 import { useNavigate } from "react-router";

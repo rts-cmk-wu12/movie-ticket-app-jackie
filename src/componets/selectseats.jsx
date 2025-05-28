@@ -62,13 +62,7 @@ function SelectSeats() {
     const totalPrice = selectedSeats.length * SEAT_PRICE;
 
     const handleCheckout = () => {
-        const existingBookings = JSON.parse(localStorage.getItem("bookings")) || [];
-
-
-        const newBookingId = existingBookings.length > 0 ? existingBookings[existingBookings.length - 1].id + 1 : 1;
-
         const newBooking = {
-            id: newBookingId,
             cinema: selectedCinema,
             date: selectedDate,
             time: selectedTime,
@@ -76,12 +70,10 @@ function SelectSeats() {
             totalPrice: totalPrice
         };
 
-        existingBookings.push(newBooking);
-        localStorage.setItem("bookings", JSON.stringify(existingBookings));
 
+        localStorage.setItem("bookingInfo", JSON.stringify(newBooking));
         localStorage.setItem("totalPrice", totalPrice.toString());
     };
-
 
     return (
         <div className="select-seats">
@@ -148,7 +140,7 @@ function SelectSeats() {
                 }}
             >
                 <Link to="/checkout">
-                    Checkout ({selectedSeats.length} sæder – ${totalPrice})
+                    <p>Checkout ({selectedSeats.length} sæder ${totalPrice})</p>
                 </Link>
             </button>
         </div>
@@ -156,5 +148,6 @@ function SelectSeats() {
 }
 
 export default SelectSeats;
+
 
 

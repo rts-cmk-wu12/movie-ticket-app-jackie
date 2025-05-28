@@ -17,7 +17,7 @@ function PopUp({ show }) {
                     Adele is a Scottish heiress whose extremely wealthy family owns estates and grounds. <br />
                     When she was a teenager. Read More
                 </p>
-                <Link to="/" className="popup-button">
+                <Link to="/ticket" className="popup-button">
                     See E-Ticket
                 </Link>
             </div>

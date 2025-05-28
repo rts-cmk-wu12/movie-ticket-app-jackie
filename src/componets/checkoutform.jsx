@@ -136,7 +136,7 @@ function CheckoutForm() {
                     </div>
                 </div>
 
-                <button type="submit" className="pay-btn">
+                <button  className="pay-btn">
                     Pay Now <span>${price.toFixed(2)}</span>
                 </button>
             </form>
