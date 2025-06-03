@@ -8,7 +8,6 @@
 
 #root {
   max-width: 430px;
-  min-height: 932px;
 
   margin: 0 auto;
   background-color: #1B1E25;
@@ -33,10 +32,6 @@ footer ul {
   background-color: #fff;
   z-index: 1000;
 
-}
-
-.footer a {
-  color: gray;
 }
 
 
@@ -117,3 +112,4 @@ li {
 .cinematext {
   margin: 0;
 }
+
