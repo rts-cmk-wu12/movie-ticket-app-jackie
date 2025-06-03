@@ -1,0 +1,104 @@
+.checkout-page {
+    padding: 20px;
+    color: white;
+    min-height: 100vh;
+}
+
+.checkout-container {
+    max-width: 400px;
+    margin: auto;
+}
+
+.payment-method .card {
+    background: linear-gradient(to right, #3b8ed3, #1790dc);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.card .logo img {
+    width: 40px;
+}
+
+.balance {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-holder,
+.card-number {
+    font-weight: 600;
+}
+
+.payment-details label {
+    display: block;
+    margin: 10px 0 5px;
+    margin-top: 40px;
+}
+
+.payment-details input,
+.payment-details select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #1B1E25;
+    color: white;
+    border: 1px solid white;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+}
+
+.col {
+    flex: 1;
+}
+
+.pay-btn {
+    background: #57aafc;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    width: 100%;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    margin-bottom: 30px;
+    width: 360px;
+    height: 170px;
+}
+
+.card-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    background: linear-gradient(to right, #444, #333);
+    border-radius: 20px;
+    padding: 20px;
+    color: white;
+
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.card.active {
+    background: linear-gradient(to right, #3b8ed3, #1790dc);
+    width: 360px;
+}

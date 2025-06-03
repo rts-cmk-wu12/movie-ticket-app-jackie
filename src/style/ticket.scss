@@ -1,0 +1,54 @@
+$background-image: url(/public/Subtract.png);
+$width: 99%;
+$height: 600px;
+
+.ticket {
+    background-image: $background-image;
+    background-size: cover;
+    width: $width;
+    height: $height;
+    display: grid;
+    grid-template-columns: repeat(2, 3fr);
+    text-align: center;
+    align-content: space-evenly;
+
+    p {
+        width: 40%;
+        margin: 0 auto;
+        font-size: 21px
+    }
+
+    font-family: 'Poppins',
+    sans-serif;
+
+}
+
+.detailsinfo {
+    text-align: center;
+}
+
+.ticket-container {
+    padding: 20px;
+    padding-top: 15%;
+    text-align: center;
+}
+
+.ticket {
+    img {
+        margin-left: 35%;
+    }
+
+    div {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+.eticket {
+    color: red;
+    font-size: 21px
+}
+
+strong {
+    font-size: 21px
+}

@@ -1,0 +1,77 @@
+.details-container {
+    color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.movie-poster {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.details-info {
+    h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .director {
+        font-size: 16px;
+        margin-bottom: 5px;
+        gap: 20px;
+    }
+
+    .rating {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #f5c518;
+    }
+
+    .tags {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 20px;
+
+        .tag {
+            background-color: #2a2a3d;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+    }
+
+    h3 {
+        text-align: left;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .overview {
+        font-size: 14px;
+        text-align: left;
+        margin-bottom: 30px;
+        line-height: 1.5;
+    }
+
+    .book-button {
+        background-color: #6db9ef;
+        color: white;
+        padding: 12px 24px;
+        font-size: 16px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        width: 350px;
+        height: 50px;
+
+
+        &:hover {
+            background-color: #4fa1d3;
+        }
+    }
+}
